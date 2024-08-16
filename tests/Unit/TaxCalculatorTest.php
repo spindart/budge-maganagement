@@ -4,6 +4,8 @@ namespace Budge\DesignPattern\Tests\Unit;
 
 use Budge\DesignPatterns\Budge;
 use Budge\DesignPatterns\TaxCalculator;
+use Budge\DesignPatterns\Taxes\Icms;
+use Budge\DesignPatterns\Taxes\Iss;
 use PHPUnit\Framework\TestCase;
 
 class TaxCalculatorTest  extends TestCase
@@ -22,7 +24,7 @@ class TaxCalculatorTest  extends TestCase
         $budgeMock = $this->getMockBuilder(Budge::class)->setConstructorArgs([100])->getMock();
         $budgeMock->method('getValue')->willReturn(100.0);
         //Act
-        $tax = $this->taxCalculator->calculateTaxBudge($budgeMock, 'ICMS');
+        $tax = $this->taxCalculator->calculateTaxBudge($budgeMock, new Icms());
         //Assert
         $this->assertEquals(10, $tax);
     }
@@ -33,7 +35,7 @@ class TaxCalculatorTest  extends TestCase
         $budgeMock = $this->getMockBuilder(Budge::class)->setConstructorArgs([100])->getMock();
         $budgeMock->method('getValue')->willReturn(100.0);
         //Act
-        $tax = $this->taxCalculator->calculateTaxBudge($budgeMock, 'ISS');
+        $tax = $this->taxCalculator->calculateTaxBudge($budgeMock, new Iss());
         //Assert
         $this->assertEquals(6, $tax);
     }

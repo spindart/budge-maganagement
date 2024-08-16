@@ -3,17 +3,12 @@
 namespace Budge\DesignPatterns;
 
 use Budge\DesignPatterns\Budge;
+use Budge\DesignPatterns\Taxes\Taxes;
 
 class TaxCalculator
 {
-    public function calculateTaxBudge(Budge $budge, string $taxName): float
+    public function calculateTaxBudge(Budge $budge, Taxes $taxes): float
     {
-        switch ($taxName) {
-            case 'ICMS':
-                return $budge->value * 0.1;
-            case 'ISS':
-                return $budge->value * 0.06;
-        }
-        return $budge->value;
+        return $taxes->calculateTax($budge);
     }
 }
