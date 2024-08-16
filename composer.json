@@ -1,0 +1,7 @@
+{
+  "autoload": {
+    "psr04": {
+      "Budge\\DesignPattern\\": "src/"
+    }
+  }
+}
