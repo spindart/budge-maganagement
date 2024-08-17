@@ -3,7 +3,7 @@
 namespace Budge\DesignPatterns\Taxes;
 
 use Budge\DesignPatterns\Budge;
-
+// Concrete strategy
 class Icms implements Taxes
 {
     public function calculateTax(Budge $budge): float

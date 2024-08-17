@@ -10,7 +10,6 @@ use PHPUnit\Framework\TestCase;
 
 class TaxCalculatorTest  extends TestCase
 {
-
     private $taxCalculator;
 
     public function setUp(): void
