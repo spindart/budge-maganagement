@@ -1,9 +1,9 @@
 <?php
 
-namespace Budge\DesignPatterns;
+namespace Budge\DesignPatterns\Strategy;
 
 use Budge\DesignPatterns\Budge;
-use Budge\DesignPatterns\Taxes\Taxes;
+use Budge\DesignPatterns\Strategy\Taxes\Interface\Taxes;
 
 class TaxCalculator
 {

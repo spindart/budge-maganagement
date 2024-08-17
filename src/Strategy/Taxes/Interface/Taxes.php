@@ -1,6 +1,6 @@
 <?php
 
-namespace Budge\DesignPatterns\Taxes;
+namespace Budge\DesignPatterns\Strategy\Taxes\Interface;
 
 use Budge\DesignPatterns\Budge;
 

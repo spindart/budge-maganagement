@@ -1,8 +1,10 @@
 <?php
 
-namespace Budge\DesignPatterns\Taxes;
+namespace Budge\DesignPatterns\Strategy\Taxes;
 
 use Budge\DesignPatterns\Budge;
+use Budge\DesignPatterns\Strategy\Taxes\Interface\Taxes;
+
 // Concrete strategy
 class Iss implements Taxes
 {

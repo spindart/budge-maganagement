@@ -3,9 +3,9 @@
 namespace Budge\DesignPattern\Tests\Unit;
 
 use Budge\DesignPatterns\Budge;
-use Budge\DesignPatterns\TaxCalculator;
-use Budge\DesignPatterns\Taxes\Icms;
-use Budge\DesignPatterns\Taxes\Iss;
+use Budge\DesignPatterns\Strategy\TaxCalculator;
+use Budge\DesignPatterns\Strategy\Taxes\Icms;
+use Budge\DesignPatterns\Strategy\Taxes\Iss;
 use PHPUnit\Framework\TestCase;
 
 class TaxCalculatorTest  extends TestCase
