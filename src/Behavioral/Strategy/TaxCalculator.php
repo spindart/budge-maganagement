@@ -7,8 +7,13 @@ use Invoice\DesignPatterns\Invoice;
 
 class TaxCalculator
 {
-    public function calculateTaxInvoice(Invoice $invoice, TaxInterface $taxes): float
+    private $strategy;
+    public function __construct(TaxInterface $strategy)
     {
-        return $taxes->calculateTax($invoice);
+        $this->strategy = $strategy;
+    }
+    public function calculateTaxInvoice(Invoice $invoice): float
+    {
+        return $this->strategy->calculateTax($invoice);
     }
 }
