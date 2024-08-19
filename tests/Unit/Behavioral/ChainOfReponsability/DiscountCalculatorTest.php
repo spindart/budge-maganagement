@@ -25,6 +25,7 @@ class DiscountCalculatorTest extends TestCase
         $discount = $this->discountCalculator->calculateDiscount($invoiceMock);
         //Assert
         $this->assertEquals(30, $discount);
+        $this->assertEquals(600, $invoiceMock->getAmount());
     }
 
     public function testDiscountCalculatorShouldDiscountOverFiveItemsAmountOver200(): void
@@ -37,6 +38,7 @@ class DiscountCalculatorTest extends TestCase
         $discount = $this->discountCalculator->calculateDiscount($invoiceMock);
         //Assert
         $this->assertEquals(20.1, $discount);
+        $this->assertEquals(600, $invoiceMock->getAmount());
     }
 
     public function testDiscountCalculatorShouldNotDiscount(): void
@@ -49,5 +51,6 @@ class DiscountCalculatorTest extends TestCase
         $discount = $this->discountCalculator->calculateDiscount($invoiceMock);
         //Assert
         $this->assertEquals(0, $discount);
+        $this->assertEquals(200, $invoiceMock->getAmount());
     }
 }

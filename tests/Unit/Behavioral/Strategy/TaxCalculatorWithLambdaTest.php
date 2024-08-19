@@ -29,6 +29,7 @@ class TaxCalculatorWithLambdaTest extends TestCase
         $tax = $this->taxCalculatorWithLambda->calculateTaxInvoice($invoiceMock, $icms);
         //Assert
         $this->assertEquals(10, $tax);
+        $this->assertEquals(100, $invoiceMock->getAmount());
     }
 
     public function testCalculateTaxInvoiceWithLambdaShouldReturnCorrectTaxInvoiceISS(): void
@@ -45,5 +46,6 @@ class TaxCalculatorWithLambdaTest extends TestCase
         $tax = $this->taxCalculatorWithLambda->calculateTaxInvoice($invoiceMock, $iss);
         //Assert
         $this->assertEquals(6, $tax);
+        $this->assertEquals(100, $invoiceMock->getAmount());
     }
 }
