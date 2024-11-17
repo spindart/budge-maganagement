@@ -1,4 +1,4 @@
-# invoice-maganagement
+# budge-maganagement
  Invoice management with design patterns
 
 # Design Patterns
